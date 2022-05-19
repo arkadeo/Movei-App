@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+
+:root
+{
+    --first--color:#22254b;
+    --secondry-color:#373b69;
+}
+*
+{
+    box-sizing: border-box;
+}
+body
+{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    margin: 0;
+    background-color: var(--secondry-color);
+}
+header
+{
+    background-color: var(--first--color);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+header #form
+{
+    margin: 0;
+    padding: 1rem;
+}
+header #search
+{
+    
+    padding: 0.5rem 1rem;
+    border-radius:5px ;
+    background-color:var(--secondry-color);
+    border: none;
+    border: var(--first--color) 1px solid;
+    transform: translateX(300px);
+    transition:transform 0.5s ease;
+}
+header #search::placeholder
+{
+    color: #eee;
+}
+#search:focus
+{
+    border: 1px solid var(--secondry-color);
+    outline: none;
+    background-color: var(--first--color);
+    color: #fff
+}
+.fa
+{
+    
+    color: #eee;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+button
+{
+    background-color: #22254b;
+    border: none;
+    
+}
+main
+{
+    display: flex;
+    flex-wrap: wrap;    
+}
+.movei
+{
+    width:300px;
+    overflow: hidden;
+    margin: 1.5rem 1rem 1rem;
+    position: relative;
+    border-radius: 3px;
+    background-color:var(--first--color);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+.movei img
+{
+    width: 100%;
+}
+.movei-info
+{
+    display: flex;
+    padding: 1rem ;
+    align-items: center;
+    justify-content: space-between;
+}
+.movei-info .title{
+    font-size: 30px;
+    color: #eee;
+}
+.movei-info span
+{
+    font-family: sans-serif;
+    font-weight:bold;
+}
+.movei-info span.green
+{
+   color: lightgreen;
+}
+.movei-info span.orange
+{
+   color: orange;
+}.movei-info span.red
+{
+   color: red;
+}
+
+.movei-veiw
+{
+    height: 80%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    padding: 1rem;
+    letter-spacing: 0.5px;
+    transform: translateY(101%);
+    transition: transform 0.5s ease-in;
+}
+.movei:hover .movei-veiw    
+{
+    transform: translateY(0);
+}
